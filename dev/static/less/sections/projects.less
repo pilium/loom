@@ -1,0 +1,40 @@
+.project-content {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project-item {
+  width: 32%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  a {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-family: @titleFont;
+    .font-size(15);
+    line-height: 26 / 15;
+    color: #606060;
+    text-transform: uppercase;
+  }
+  &__keywords {
+    margin-bottom: 10px;
+    .font-size(12);
+    line-height: 26 /12;
+    color: @mainColor;
+  }
+  &__text {
+    .font-size(14);
+    line-height: 25 / 14;
+    color: #7a7a7a;
+  }
+}

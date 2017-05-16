@@ -56,7 +56,10 @@ video
 {
     vertical-align: middle;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 textarea
 {
     resize: none;
@@ -66,7 +69,7 @@ section
 {
     position: relative;
 
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 button,
@@ -116,7 +119,9 @@ select
 .container
 {
     width: 100%;
-    max-width: 1170px;
+    max-width: 1190px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin: 0 auto;
 }
 @import '_common.less';  // Общие стили
@@ -126,5 +131,8 @@ select
 @import 'sections/banner.less';// Стили  для секции баннер(слайдер)
 @import 'sections/whatwedo.less'; // Стили для секции What We Do
 @import "sections/process.less"; // Стили для секции Our process
+@import "sections/projects.less"; // Стили для секции OUR RECENT PROJECTS
+@import "sections/opinions.less"; // Стили для секции What Our Customers Think
+@import "sections/journal.less"; // Стили для секции from the journal
 @import 'modules/_footer.less';// Стили футера
 @import '_media.less';// Стили медиазапросов

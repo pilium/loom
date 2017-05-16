@@ -1,0 +1,31 @@
+.opinions {
+  min-height: 330px;
+  background:  url(../img/content/opinions-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+.opinions-text {
+  margin-bottom: 25px;
+  font-family: @lightFont;
+  .font-size(20);
+  line-height: 35 / 20;
+  color: #d8d8d8;
+  text-align: center;
+}
+.opinions-author {
+  font-family: @titleFont;
+  .font-size(12);
+  line-height: 22 /12;
+  color: @mainColor;
+  text-align: center;
+  text-transform: uppercase;
+}
+.slick-dots li {
+  width: 13px;
+  height: 13px;
+  border: 1px solid #777;
+  transition: all .3s ease-in-out;
+
+  &.slick-active {
+    border-color: #bebebe;
+  }
+}
