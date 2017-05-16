@@ -1,0 +1,203 @@
+.process
+{
+    min-height: 400px;
+
+    background: url(../img/content/process-bg.jpg) center no-repeat;
+    background-size: cover;
+}
+.process-text
+{
+    padding: 0 15px 45px;
+
+    text-align: center;
+
+    color: #d0d0d0;
+}
+.process-icon__wrap
+{
+    display: -webkit-flex;
+    display:     -ms-flex;
+    display:         flex;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.process-item
+{
+    position: relative;
+
+    display: -webkit-flex;
+    display:     -ms-flex;
+    display:         flex;
+    flex-direction: column;
+
+    width: 100%;
+    max-width: 135px;
+
+    cursor: pointer;
+
+    justify-content: space-around;
+    align-items: center;
+
+    &::before
+    {
+        position: absolute;
+        top: 47px;
+        left: 100%;
+
+        display: inline-block;
+
+        width: 180px;
+        height: 1px;
+
+        content: '';
+
+        background-color: #777;
+    }
+    &:last-of-type::before
+    {
+        display: none;
+    }
+
+    &.active
+    {
+        cursor: auto;
+        .icon-wrap
+        {
+            background-color: @mainColor;
+            background-position: -264px, -30px;
+        }
+    }
+    &--creative
+    {
+        .icon-wrap
+        {
+            background-position: -174px, -30px;
+        }
+    }
+    &--creative:hover
+    {
+        .icon-wrap
+        {
+            background-color: @mainColor;
+            background-position: -264px, -30px;
+        }
+    }
+    &--rapid
+    {
+        .icon-wrap
+        {
+            background-position: -546px, -30px;
+        }
+    }
+    &--rapid:hover
+    {
+        .icon-wrap
+        {
+            background-color: @mainColor;
+            background-position: -636px, -30px;
+        }
+    }
+    &--magic
+    {
+        .icon-wrap
+        {
+            background-position: -357px, -30px;
+        }
+    }
+    &--magic:hover
+    {
+        .icon-wrap
+        {
+            background-color: @mainColor;
+            background-position: -453px, -30px;
+        }
+    }
+    &--award
+    {
+        .icon-wrap
+        {
+            background-position: 3px, -30px;
+        }
+    }
+    &--award:hover
+    {
+        .icon-wrap
+        {
+            background-color: @mainColor;
+            background-position: -85px, -30px;
+        }
+    }
+}
+.icon-wrap
+{
+    display: inline-block;
+
+    width: 98px;
+    height: 98px;
+    margin-bottom: 20px;
+
+    transition: background-color .5s ease;
+
+    border: 2px solid #1abb9c;
+    border-radius: 50%;
+    background-image: url(../img/sprite/sprite.png);
+}
+.icon-descr
+{
+    font-family: @titleFont;
+    line-height: 22 / 14;
+
+    text-transform: uppercase;
+
+    color: #ddd;
+
+    .font-size(14);
+}
+
+
+
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0)
+{
+    width: @width;
+    height: @height;
+
+    background-position: @x @y;
+}
+
+// .sprite {
+//     background-image: url(spritesheet.png);    background-repeat: no-repeat;
+//     display: block;
+//
+//     &.sprite-award {
+//         .stitches-sprite(-30px, -30px, 28px, 48px);
+//     }
+//
+//     &.sprite-award-hover {
+//         .stitches-sprite(-118px, -30px, 28px, 48px);
+//     }
+//
+//     &.sprite-creative {
+//         .stitches-sprite(-206px, -30px, 30px, 48px);
+//     }
+//
+//     &.sprite-creative-hover {
+//         .stitches-sprite(-296px, -30px, 30px, 48px);
+//     }
+//
+//     &.sprite-magic {
+//         .stitches-sprite(-386px, -30px, 36px, 48px);
+//     }
+//
+//     &.sprite-magic-hover {
+//         .stitches-sprite(-482px, -30px, 36px, 48px);
+//     }
+//
+//     &.sprite-rapid {
+//         .stitches-sprite(-578px, -30px, 30px, 48px);
+//     }
+//
+//     &.sprite-rapid-hover {
+//         .stitches-sprite(-668px, -30px, 30px, 48px);
+//     }
+// }

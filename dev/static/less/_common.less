@@ -1,0 +1,36 @@
+.process-title__wrap {
+  text-align: center;
+}
+.g-section-title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: @titleFont;
+  .font-size(16);
+  line-height: 22 / 16;
+  color: @titleColor;
+  text-transform: uppercase;
+
+  &.g-section-title__white {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-top: 80px;
+    color: #fff;
+
+    &::after,
+    &::before {
+      position: absolute;
+      top: 90px;
+      content: '';
+      height: 1px;
+      width: 80px;
+      background-color: #777;
+    }
+    &::before {
+      left: -100px;
+    }
+    &::after {
+      right: -100px;
+    }
+  }
+}

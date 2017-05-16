@@ -1,0 +1,6 @@
+product/
+node_modules/
+.DS_Store
+THumbs.db
+*.log
+*.psd

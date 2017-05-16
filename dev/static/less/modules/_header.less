@@ -1,0 +1,48 @@
+header {
+  background-color: #f5f5f5;
+  color: #fff;
+}
+.header-top__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 100px;
+  height: 70px;
+  padding: 15px 10px;
+}
+.main-nav__list {
+    font-size: 0;
+    li {
+          .font-size(13);
+          display: inline-block;
+          margin-right: 50px;
+          vertical-align: middle;
+          font-family: @titleFont;
+          line-height: 1.69;
+          text-transform: uppercase;
+          cursor: pointer;
+
+          a.active
+          {
+            color: @mainColor;
+            &:hover {
+              color: @mainColor;
+          }
+        }
+    }
+}
+.page-title  {
+  font-family: @titleFont;
+  .font-size(35);
+  line-height: 0.62;
+  color: #606060;
+
+}
+.page-title__text {
+  font-family: @lightFont;
+  margin-bottom: 70px;
+  .font-size(25);
+  line-height: 1.13;
+  color: #606060;
+}

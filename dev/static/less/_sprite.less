@@ -1,0 +1,198 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@arrow-left-name: 'arrow-left';
+@arrow-left-x: 0px;
+@arrow-left-y: 0px;
+@arrow-left-offset-x: 0px;
+@arrow-left-offset-y: 0px;
+@arrow-left-width: 45px;
+@arrow-left-height: 45px;
+@arrow-left-total-width: 300px;
+@arrow-left-total-height: 241px;
+@arrow-left-image: '../img/sprite/sprite.png';
+@arrow-left: 0px 0px 0px 0px 45px 45px 300px 241px '../img/sprite/sprite.png' 'arrow-left';
+@arrow-right-name: 'arrow-right';
+@arrow-right-x: 95px;
+@arrow-right-y: 0px;
+@arrow-right-offset-x: -95px;
+@arrow-right-offset-y: 0px;
+@arrow-right-width: 45px;
+@arrow-right-height: 45px;
+@arrow-right-total-width: 300px;
+@arrow-right-total-height: 241px;
+@arrow-right-image: '../img/sprite/sprite.png';
+@arrow-right: 95px 0px -95px 0px 45px 45px 300px 241px '../img/sprite/sprite.png' 'arrow-right';
+@award-hover-name: 'award-hover';
+@award-hover-x: 160px;
+@award-hover-y: 193px;
+@award-hover-offset-x: -160px;
+@award-hover-offset-y: -193px;
+@award-hover-width: 28px;
+@award-hover-height: 48px;
+@award-hover-total-width: 300px;
+@award-hover-total-height: 241px;
+@award-hover-image: '../img/sprite/sprite.png';
+@award-hover: 160px 193px -160px -193px 28px 48px 300px 241px '../img/sprite/sprite.png' 'award-hover';
+@award-name: 'award';
+@award-x: 238px;
+@award-y: 193px;
+@award-offset-x: -238px;
+@award-offset-y: -193px;
+@award-width: 28px;
+@award-height: 48px;
+@award-total-width: 300px;
+@award-total-height: 241px;
+@award-image: '../img/sprite/sprite.png';
+@award: 238px 193px -238px -193px 28px 48px 300px 241px '../img/sprite/sprite.png' 'award';
+@creative-hover-name: 'creative-hover';
+@creative-hover-x: 190px;
+@creative-hover-y: 0px;
+@creative-hover-offset-x: -190px;
+@creative-hover-offset-y: 0px;
+@creative-hover-width: 30px;
+@creative-hover-height: 48px;
+@creative-hover-total-width: 300px;
+@creative-hover-total-height: 241px;
+@creative-hover-image: '../img/sprite/sprite.png';
+@creative-hover: 190px 0px -190px 0px 30px 48px 300px 241px '../img/sprite/sprite.png' 'creative-hover';
+@creative-name: 'creative';
+@creative-x: 270px;
+@creative-y: 0px;
+@creative-offset-x: -270px;
+@creative-offset-y: 0px;
+@creative-width: 30px;
+@creative-height: 48px;
+@creative-total-width: 300px;
+@creative-total-height: 241px;
+@creative-image: '../img/sprite/sprite.png';
+@creative: 270px 0px -270px 0px 30px 48px 300px 241px '../img/sprite/sprite.png' 'creative';
+@magic-hover-name: 'magic-hover';
+@magic-hover-x: 0px;
+@magic-hover-y: 95px;
+@magic-hover-offset-x: 0px;
+@magic-hover-offset-y: -95px;
+@magic-hover-width: 36px;
+@magic-hover-height: 48px;
+@magic-hover-total-width: 300px;
+@magic-hover-total-height: 241px;
+@magic-hover-image: '../img/sprite/sprite.png';
+@magic-hover: 0px 95px 0px -95px 36px 48px 300px 241px '../img/sprite/sprite.png' 'magic-hover';
+@magic-name: 'magic';
+@magic-x: 86px;
+@magic-y: 95px;
+@magic-offset-x: -86px;
+@magic-offset-y: -95px;
+@magic-width: 36px;
+@magic-height: 48px;
+@magic-total-width: 300px;
+@magic-total-height: 241px;
+@magic-image: '../img/sprite/sprite.png';
+@magic: 86px 95px -86px -95px 36px 48px 300px 241px '../img/sprite/sprite.png' 'magic';
+@rapid-hover-name: 'rapid-hover';
+@rapid-hover-x: 0px;
+@rapid-hover-y: 193px;
+@rapid-hover-offset-x: 0px;
+@rapid-hover-offset-y: -193px;
+@rapid-hover-width: 30px;
+@rapid-hover-height: 48px;
+@rapid-hover-total-width: 300px;
+@rapid-hover-total-height: 241px;
+@rapid-hover-image: '../img/sprite/sprite.png';
+@rapid-hover: 0px 193px 0px -193px 30px 48px 300px 241px '../img/sprite/sprite.png' 'rapid-hover';
+@rapid-name: 'rapid';
+@rapid-x: 80px;
+@rapid-y: 193px;
+@rapid-offset-x: -80px;
+@rapid-offset-y: -193px;
+@rapid-width: 30px;
+@rapid-height: 48px;
+@rapid-total-width: 300px;
+@rapid-total-height: 241px;
+@rapid-image: '../img/sprite/sprite.png';
+@rapid: 80px 193px -80px -193px 30px 48px 300px 241px '../img/sprite/sprite.png' 'rapid';
+@spritesheet-width: 300px;
+@spritesheet-height: 241px;
+@spritesheet-image: '../img/sprite/sprite.png';
+@spritesheet-sprites: @arrow-left @arrow-right @award-hover @award @creative-hover @creative @magic-hover @magic @rapid-hover @rapid;
+@spritesheet: 300px 241px '../img/sprite/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

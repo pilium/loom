@@ -1,0 +1,373 @@
+@import '../libs/normalize/normalize.css';
+@import '../libs/magnific/magnific-popup.css';
+@import '../libs/animate/animate.css';
+@import '../libs/slick/slick.css';
+@import '../libs/slick/slick-theme.css';
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+html {
+  font-size: 14px;
+  line-height: 1.78;
+}
+body {
+  font-family: mainFont;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+li,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+textarea {
+  resize: none;
+}
+section {
+  position: relative;
+  margin-bottom: 20px;
+}
+button,
+input,
+select {
+  outline: none;
+}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+.clearfix:after,
+.clearfix:before {
+  display: table;
+  content: ' ';
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.process-title__wrap {
+  text-align: center;
+}
+.g-section-title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: 'RalewayExtraBold', 'Arial', sans-serif;
+  font-size: 1.1428571428571428rem;
+  line-height: 1.375;
+  color: #606060;
+  text-transform: uppercase;
+}
+.g-section-title.g-section-title__white {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding-top: 80px;
+  color: #fff;
+}
+.g-section-title.g-section-title__white::after,
+.g-section-title.g-section-title__white::before {
+  position: absolute;
+  top: 90px;
+  content: '';
+  height: 1px;
+  width: 80px;
+  background-color: #777;
+}
+.g-section-title.g-section-title__white::before {
+  left: -100px;
+}
+.g-section-title.g-section-title__white::after {
+  right: -100px;
+}
+header {
+  background-color: #f5f5f5;
+  color: #fff;
+}
+.header-top__content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 100px;
+  height: 70px;
+  padding: 15px 10px;
+}
+.main-nav__list {
+  font-size: 0;
+}
+.main-nav__list li {
+  font-size: 0.9285714285714286rem;
+  display: inline-block;
+  margin-right: 50px;
+  vertical-align: middle;
+  font-family: 'RalewayExtraBold', 'Arial', sans-serif;
+  line-height: 1.69;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.main-nav__list li a.active {
+  color: #1abb9c;
+}
+.main-nav__list li a.active:hover {
+  color: #1abb9c;
+}
+.page-title {
+  font-family: 'RalewayExtraBold', 'Arial', sans-serif;
+  font-size: 2.5rem;
+  line-height: 0.62;
+  color: #606060;
+}
+.page-title__text {
+  font-family: 'RalewayLight', 'Arial', sans-serif;
+  margin-bottom: 70px;
+  font-size: 1.7857142857142858rem;
+  line-height: 1.13;
+  color: #606060;
+}
+.banner {
+  margin-bottom: 80px;
+}
+.banner-slider {
+  position: relative;
+}
+.banner-slider__controls {
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  width: 45px;
+  height: 45px;
+  z-index: 10;
+  background: url('../img/sprite/arrow-sprite.png') no-repeat;
+  cursor: pointer;
+}
+.banner-slider__prev {
+  background-position: -105px, -20px;
+  left: 20px;
+}
+.banner-slider__next {
+  background-position: -20px, -20px;
+  right: 20px;
+}
+.what {
+  margin-bottom: 80px;
+}
+.what_wrap {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.what-item {
+  width: 24%;
+  padding-top: 50px;
+  padding-bottom: 45px;
+  border: 1px solid #e1e1e1;
+  outline: 1px solid #e1e1e1;
+  outline-offset: 3px;
+  text-align: center;
+}
+.what-item:first-of-type {
+  outline: none;
+}
+.what-item .img-wrap {
+  margin-bottom: 20px;
+}
+.what-item .what-title {
+  margin-bottom: 7px;
+}
+.what-item .what-text {
+  padding: 0 10px;
+}
+.work-item h4 {
+  margin-bottom: 7px;
+}
+.work-item p {
+  padding: 0 10px;
+}
+.process {
+  min-height: 400px;
+  background: url(../img/content/process-bg.jpg) center no-repeat;
+  background-size: cover;
+}
+.process-text {
+  padding: 0 15px 45px;
+  text-align: center;
+  color: #d0d0d0;
+}
+.process-icon__wrap {
+  display: -ms-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.process-item {
+  position: relative;
+  display: -ms-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  width: 100%;
+  max-width: 135px;
+  cursor: pointer;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.process-item::before {
+  position: absolute;
+  top: 47px;
+  left: 100%;
+  display: inline-block;
+  width: 180px;
+  height: 1px;
+  content: '';
+  background-color: #777;
+}
+.process-item:last-of-type::before {
+  display: none;
+}
+.process-item.active {
+  cursor: auto;
+}
+.process-item.active .icon-wrap {
+  background-color: #1abb9c;
+  background-position: -264px, -30px;
+}
+.process-item--creative .icon-wrap {
+  background-position: -174px, -30px;
+}
+.process-item--creative:hover .icon-wrap {
+  background-color: #1abb9c;
+  background-position: -264px, -30px;
+}
+.process-item--rapid .icon-wrap {
+  background-position: -546px, -30px;
+}
+.process-item--rapid:hover .icon-wrap {
+  background-color: #1abb9c;
+  background-position: -636px, -30px;
+}
+.process-item--magic .icon-wrap {
+  background-position: -357px, -30px;
+}
+.process-item--magic:hover .icon-wrap {
+  background-color: #1abb9c;
+  background-position: -453px, -30px;
+}
+.process-item--award .icon-wrap {
+  background-position: 3px, -30px;
+}
+.process-item--award:hover .icon-wrap {
+  background-color: #1abb9c;
+  background-position: -85px, -30px;
+}
+.icon-wrap {
+  display: inline-block;
+  width: 98px;
+  height: 98px;
+  margin-bottom: 20px;
+  transition: background-color 0.5s ease;
+  border: 2px solid #1abb9c;
+  border-radius: 50%;
+  background-image: url(../img/sprite/sprite.png);
+}
+.icon-descr {
+  font-family: 'RalewayExtraBold', 'Arial', sans-serif;
+  line-height: 1.57142857;
+  text-transform: uppercase;
+  color: #ddd;
+  font-size: 1rem;
+}
