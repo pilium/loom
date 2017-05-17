@@ -195,7 +195,7 @@ header {
   height: 40px;
   padding: 0;
   transition: all .3s ease;
-  background: rgba(203, 192, 188, 0.7);
+  background: rgba(203, 192, 188, 0.8);
   -ms-flex-pack: center;
       justify-content: center;
 }
@@ -227,14 +227,15 @@ header {
   text-transform: uppercase;
   font-size: 0.9285714285714286rem;
 }
+.main-nav__list > li:hover a {
+  color: #1abb9c;
+}
 .main-nav__list > li:hover ul {
   left: 0;
   opacity: 1;
 }
 .main-nav__list > li:hover ul a {
-  padding: 5px;
-  background-color: rgba(215, 208, 205, 0.75);
-  color: #1abb9c;
+  color: #000;
 }
 .main-nav__list > li:last-child {
   margin-right: 0;
@@ -264,7 +265,7 @@ header {
   display: none;
   width: 70px;
   position: absolute;
-  right: -1.5%;
+  right: 0;
   top: -20px;
   bottom: -21px;
   cursor: pointer;
@@ -293,7 +294,7 @@ header {
   display: block;
   width: 30px;
   height: 2px;
-  background-color: red;
+  background-color: #000;
 }
 .nav-mobile__line--top {
   top: 50px;
@@ -320,15 +321,29 @@ header {
   width: 45px;
   height: 45px;
   z-index: 10;
-  background: url('../img/sprite/arrow-sprite.png') no-repeat;
+  background: #fff;
   cursor: pointer;
 }
+.banner-slider__controls::before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid transparent;
+  border-left-color: #777;
+  border-right: 0;
+}
 .banner-slider__prev {
-  background-position: -105px, -20px;
   left: 20px;
 }
+.banner-slider__prev::before {
+  border-right: 10px solid  #777;
+  border-left: 0;
+}
 .banner-slider__next {
-  background-position: -20px, -20px;
   right: 20px;
 }
 .what {
@@ -625,15 +640,15 @@ footer {
         justify-content: flex-start;
   }
   .header-top__content .header__logo {
-    margin-right: 80px;
+    margin-right: 120px;
   }
   .what_wrap {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
   .what-item {
-    margin-bottom: 40px;
     width: 35%;
+    margin-bottom: 40px;
   }
   .what-item:first-of-type {
     outline: 1px solid #e1e1e1;
@@ -654,38 +669,67 @@ footer {
   .header-top__content {
     position: relative;
     width: 100%;
-    max-width: 900px;
   }
   .header-top__content .nav-mobile {
     display: block;
   }
+  .page-title {
+    margin-top: 20px;
+  }
   .main-nav__list {
-    position: absolute;
-    z-index: 1;
-    top: -900px;
-    width: 100%;
-    max-width: 800px;
-    padding: 45px 0 45px 30px;
-    transition: all .8s linear;
-    background-color: #D6CECC;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    bottom: 0;
+    left: -800px;
+    width: 75%;
+    height: 100%;
+    margin: 0;
+    padding: 15px 20px;
+    transition: left .3s;
+    background: rgba(197, 179, 177, 0.8);
   }
   .main-nav__list.mobile-show {
-    top: 64px;
-    transition: all .8s linear;
+    left: 0;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px 0 rgba(0, 0, 0, 0.5);
   }
-  .main-nav__list > li {
+  .main-nav__list.mobile-show ul {
+    display: none;
+    opacity: 0;
+  }
+  .main-nav__list li {
     display: block;
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
-  .main-nav__list > li:last-child {
-    margin-bottom: 0;
+  .main-nav__list li:hover ul {
+    position: static;
+    display: block;
+    opacity: 1;
+    font-size: 0.7142857142857143rem;
+  }
+  .main-nav__list li a {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    font-size: 1.2em;
+    color: #dadada;
+    width: 100%;
+    text-decoration: none;
+    /* плавный переход */
+    transition: color .5s ease, padding .5s ease;
   }
   .what_wrap {
     -ms-flex-pack: center;
         justify-content: center;
   }
   .what-item {
-    width: 90%;
+    width: 80%;
   }
   .what-item:first-of-type {
     outline: 1px solid #e1e1e1;
@@ -717,12 +761,12 @@ footer {
 }
 @media screen and (max-width: 500px) {
   .page-title {
-    font-size: 1.5rem;
     line-height: 1;
+    font-size: 1.5rem;
   }
   .page-title__text {
-    font-size: 1rem;
     line-height: 1.2;
+    font-size: 1rem;
   }
   .g-section-title.g-section-title__white::after,
   .g-section-title.g-section-title__white::before {
@@ -735,8 +779,8 @@ footer {
     right: -35px;
   }
   .process-text {
-    font-size: 0.9285714285714286rem;
     line-height: 1.4;
+    font-size: 0.9285714285714286rem;
   }
   .process-item {
     max-width: 90%;

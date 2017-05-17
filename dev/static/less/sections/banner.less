@@ -11,15 +11,31 @@
     width: 45px;
     height: 45px;
     z-index: 10;
-    background: url('../img/sprite/arrow-sprite.png') no-repeat;
+    background: #fff;
     cursor: pointer;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      border: 10px solid transparent;
+      border-left-color: #777;
+      border-right: 0;
+    }
 }
 .banner-slider__prev {
-    background-position: -105px, -20px ;
     left: 20px;
+
+    &::before {
+      border-right: 10px solid  #777;
+      border-left: 0;
+    }
 
 }
 .banner-slider__next {
-    background-position: -20px, -20px ;
     right: 20px;
     }

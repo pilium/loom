@@ -32,7 +32,7 @@ header
 
         transition: all .3s ease;
 
-        background: rgba(203, 192, 188, .7);
+        background: rgba(203, 192, 188, .8);
 
         justify-content: center;
 
@@ -74,15 +74,16 @@ header
 
         .font-size(13);
 
+        &:hover a{
+          color: @mainColor;
+        }
 
         &:hover ul {
           left: 0;
           opacity:1;
         }
         &:hover ul a {
-          padding: 5px;
-          background-color: rgba(215, 208, 205, .75);
-          color: rgba(26, 187, 156, 1);
+          color: #000;
         }
 
         &:last-child
@@ -128,7 +129,7 @@ header
   display: none;
   width: 70px;
   position: absolute;
-  right: -1.5%;
+  right: 0;
   top: -20px;
   bottom: -21px;
   cursor: pointer;
@@ -157,7 +158,7 @@ header
   display: block;
   width: 30px;
   height: 2px;
-  background-color: red;
+  background-color: #000;
 }
 .nav-mobile__line--top{
   top: 50px;

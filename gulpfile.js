@@ -137,7 +137,7 @@ gulp.task('clean', function() {
 
 // Оптимизация изображений
 gulp.task('img', function() {
-    return gulp.src(['dev/static/img/**/*.{png,jpg,gif}', '!dev/static/img/sprite/*'])
+    return gulp.src(['dev/static/img/**/*.{png,jpg,gif,ico}', '!dev/static/img/sprite/*'])
         .pipe(cache(imagemin({
             optimizationLevel: 3,
             progressive: true,
@@ -161,6 +161,9 @@ gulp.task('build', ['clean', 'img', 'less', 'scripts'], function() {
 
     var buildHtml = gulp.src('dev/*.html')
         .pipe(gulp.dest('product/'));
+
+    var buildLibs = gulp.src('dev/static/libs/**/*')
+        .pipe(gulp.dest('product/static/libs/'));
 
     var buildImg = gulp.src('dev/static/img/sprite/sprite.png')
         .pipe(imagemin({
