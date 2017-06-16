@@ -1,4 +1,4 @@
-// Начинать писать отсюда!!!!
+
 $( document ).ready( function () {
 
   $( '.js-banner-slider' ).slick( {
@@ -26,7 +26,7 @@ $( document ).ready( function () {
   } );
   $('.popup-link').magnificPopup({
     type: 'inline',
-    
+
   })
 } );
 $( window ).scroll( function () {

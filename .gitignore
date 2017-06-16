@@ -4,3 +4,5 @@ node_modules/
 THumbs.db
 *.log
 *.psd
+/dev/static/libs/
+/dev/static/css/
